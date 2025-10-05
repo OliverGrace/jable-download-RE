@@ -3,12 +3,12 @@
 
 `jable-chrome-extensions`是chrome 插件
 
-借用了 [N_m3u8DL-CLI](https://github.com/nilaoda/N_m3u8DL-CLI)实现下载`m3u8`，合并成 `mp4`功能
+借用了 [N_m3u8DL-RE](https://github.com/nilaoda/N_m3u8DL-RE)实现下载`m3u8`，合并成 `mp4`功能
 
-`N_m3u8DL-CLI`已经自带`m3u8dl`协议，注册就可使用
+`N_m3u8DL-RE`已经自带`m3u8dl`协议，注册就可使用
 
 #### 实现流程
-`注册一个协议` --> `chrome插件生成一个下载链接` --> `调用N_m3u8DL-CLI开始下载`
+`注册一个协议` --> `chrome插件生成一个下载链接` --> `调用N_m3u8DL-RE开始下载`
 
 
 # 安装 
