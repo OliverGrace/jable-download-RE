@@ -14,10 +14,13 @@
 
     // 编码字符串为 Base64
     function encodeBase64(str) {
-        const bytes = new TextEncoder().encode(str); // UTF-8 编码
-        const binary = Array.from(bytes).map(b => String.fromCharCode(b)).join('');
-        return btoa(binary);
-    }
+    const bytes = new TextEncoder().encode(str); // UTF-8 编码
+    const binary = Array.from(bytes).map(b => String.fromCharCode(b)).join('');
+    return btoa(binary)
+        .replace(/\+/g, '-')  // URL safe
+        .replace(/\//g, '_')  // URL safe
+        .replace(/=+$/, '');  // 去掉末尾=
+}
 
     function renderDownloadButton() {
         // console.log('config',config);
